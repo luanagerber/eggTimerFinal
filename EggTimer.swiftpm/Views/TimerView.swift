@@ -14,7 +14,6 @@ struct TimerView: View {
     var body: some View {
                 
         let eggTimes = ["Soft": 3, "Medium": 5, "Hard": 7]
-        let name = UserDefaults.standard.string(forKey: "userName") ?? ""
         
         ZStack {
             Constants.backgroundColor
@@ -28,7 +27,7 @@ struct TimerView: View {
                     .foregroundStyle(Constants.fontColor)
                     .multilineTextAlignment(.center)
                 
-                Text("Hello \(name), \nhow would you like your eggs?")
+                Text("How would you like your eggs?")
                     .font(.system(size: Constants.subtitleFontSize))
                     .fontWeight(.regular)
                     .foregroundStyle(Constants.fontColor)
@@ -101,7 +100,9 @@ struct TimerView: View {
                 }
                 
                 Spacer()
-             
+
+                Spacer()
+
                 HStack{
                     Text("Time left:")
                         .font(.system(size: Constants.textFontSize))
