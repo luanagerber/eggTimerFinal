@@ -33,7 +33,7 @@ struct HomeView: View {
                         .foregroundStyle(Constants.fontColor)
                         .multilineTextAlignment(.center)
                     
-                    HStack(spacing: -70){
+                    HStack(spacing: -40){
                         Image("egg_soft")
                             .resizable()
                             .frame(width: 150, height: 150)
@@ -52,14 +52,14 @@ struct HomeView: View {
                         .foregroundStyle(Constants.fontColor)
                         .multilineTextAlignment(.center)
                     
-                    TextField("Write your name to start!", text: $name)
-                        .font(.system(size: Constants.buttonFontSize))
-                        .fontWeight(.semibold)
-                        .foregroundColor(Constants.fontColor)
-                        .multilineTextAlignment(.center)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding(.trailing, 40)
-                        .padding(.leading, 40)
+//                    TextField("Write your name to start!", text: $name)
+//                        .font(.system(size: Constants.buttonFontSize))
+//                        .fontWeight(.semibold)
+//                        .foregroundColor(Constants.fontColor)
+//                        .multilineTextAlignment(.center)
+//                        .textFieldStyle(RoundedBorderTextFieldStyle())
+//                        .padding(.trailing, 40)
+//                        .padding(.leading, 40)
                     
                     Spacer()
 
