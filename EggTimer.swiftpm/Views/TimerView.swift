@@ -9,17 +9,18 @@ import SwiftUI
 
 struct TimerView: View {
     
-    @StateObject private var viewModel = TimerViewModel() // Criando instância da ViewModel
-
+    @StateObject private var viewModel = TimerViewModel() // Instância da ViewModel para gerenciar o estado do timer.
+    
     var body: some View {
-                
-        let eggTimes = ["Soft": 3, "Medium": 5, "Hard": 7]
+        
+        let eggTimes = ["Soft": 3, "Medium": 5, "Hard": 7] // Dicionário com os tempos de cozimento dos ovos.
         
         ZStack {
             Constants.backgroundColor
-                .ignoresSafeArea()
+                .ignoresSafeArea() // Define o fundo da tela.
             
-            VStack(spacing: 20){
+            VStack(spacing: 20) {
+                // Título principal
                 Text("Egg Timer")
                     .font(Constants.titleFont)
                     .fontWeight(.semibold)
@@ -27,6 +28,7 @@ struct TimerView: View {
                     .foregroundStyle(Constants.fontColor)
                     .multilineTextAlignment(.center)
                 
+                // Subtítulo
                 Text("How would you like your eggs?")
                     .font(.system(size: Constants.subtitleFontSize))
                     .fontWeight(.regular)
@@ -35,18 +37,18 @@ struct TimerView: View {
                 
                 Spacer()
                 
-                HStack(spacing: 0){
-                    VStack{
-                        Image("egg_soft")
+                // Botões para selecionar o tipo de cozimento
+                HStack(spacing: 0) {
+                    VStack {
+                        Image("egg_soft") // Imagem do ovo "Soft".
                             .resizable()
                             .frame(width: 120, height: 120)
-                                                
+                        
+                        // Botão para iniciar o timer "Soft".
                         Button(action: {
                             viewModel.startTimer(duration: eggTimes["Soft"] ?? 0)
-                            
                             print("Soft timer set: \(eggTimes["Soft"] ?? 0) minutes")
                         }) {
-                            
                             Text("Soft")
                                 .font(.system(size: Constants.buttonFontSize))
                                 .fontWeight(.semibold)
@@ -57,14 +59,14 @@ struct TimerView: View {
                         }.padding()
                     }
                     
-                    VStack{
-                        Image("egg_medium")
+                    VStack {
+                        Image("egg_medium") // Imagem do ovo "Medium".
                             .resizable()
                             .frame(width: 120, height: 120)
-                                                
+                        
+                        // Botão para iniciar o timer "Medium".
                         Button(action: {
                             viewModel.startTimer(duration: eggTimes["Medium"] ?? 0)
-                            
                             print("Medium timer set: \(eggTimes["Medium"] ?? 0) minutes")
                         }) {
                             Text("Medium")
@@ -77,14 +79,14 @@ struct TimerView: View {
                         }.padding()
                     }
                     
-                    VStack{
-                        Image("egg_hard")
+                    VStack {
+                        Image("egg_hard") // Imagem do ovo "Hard".
                             .resizable()
                             .frame(width: 120, height: 120)
                         
+                        // Botão para iniciar o timer "Hard".
                         Button(action: {
                             viewModel.startTimer(duration: eggTimes["Hard"] ?? 0)
-                            
                             print("Hard timer set: \(eggTimes["Hard"] ?? 0) minutes")
                         }) {
                             Text("Hard")
@@ -95,21 +97,18 @@ struct TimerView: View {
                                 .background(Constants.buttonBackgroundColor)
                                 .cornerRadius(Constants.buttonCornerRadius)
                         }.padding()
-                        
                     }
                 }
                 
                 Spacer()
-
-                Spacer()
-
-                HStack{
+                
+                // Exibe o tempo restante e muda a cor com base no estado do timer.
+                HStack {
                     Text("Time left:")
                         .font(.system(size: Constants.textFontSize))
                         .fontWeight(.regular)
                         .foregroundStyle(Constants.fontColor)
                     
-                    // Exibe o tempo restante
                     Text("\(viewModel.timeRemaining) seconds")
                         .font(.system(size: Constants.textFontSize))
                         .fontWeight(.semibold)
@@ -118,7 +117,6 @@ struct TimerView: View {
                         .background(viewModel.timerRunning ? Color("customOrange") : .green.opacity(0.8))
                         .cornerRadius(Constants.buttonCornerRadius)
                 }
-                
             }
             .padding(.top, 70)
             .padding(.bottom, 50)
@@ -126,8 +124,6 @@ struct TimerView: View {
     }
 }
 
-struct TimerView_Previews: PreviewProvider {
-    static var previews: some View {
-        TimerView ()
-    }
+#Preview {
+    TimerView()
 }

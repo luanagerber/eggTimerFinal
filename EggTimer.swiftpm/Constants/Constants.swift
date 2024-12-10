@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreFoundation
 
-
+// Para entender mais sobre esse contéudo procurar no Figma "Folha de Estilos"
 struct Constants {
     //Element Colors
     static let backgroundColor = Color("lightBlue")

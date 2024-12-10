@@ -8,24 +8,22 @@
 import SwiftUI
 
 struct HomeView: View {
-    
-    @AppStorage("userName") var name: String = ""
-    
     var body: some View {
-        NavigationStack {
+        NavigationStack { // Gerencia a navegação entre telas.
             ZStack {
                 Constants.backgroundColor
-                    .ignoresSafeArea()
+                    .ignoresSafeArea() // Define a cor de fundo cobrindo toda a tela.
                 
-                Image("Background")
+                Image("Background") // Imagem de fundo decorativa.
                     .resizable()
-                    .opacity(0.15)
+                    .opacity(0.15) // Define a transparência da imagem.
                     .aspectRatio(contentMode: .fill)
                     .ignoresSafeArea()
                 
                 VStack(spacing: 20) {
                     Spacer()
                     
+                    // Título principal da tela.
                     Text("Welcome to \nEgg Timer!")
                         .font(Constants.titleFont)
                         .fontWeight(.semibold)
@@ -33,7 +31,8 @@ struct HomeView: View {
                         .foregroundStyle(Constants.fontColor)
                         .multilineTextAlignment(.center)
                     
-                    HStack(spacing: -40){
+                    // Imagens dos ovos para decorar a interface.
+                    HStack(spacing: -40) {
                         Image("egg_soft")
                             .resizable()
                             .frame(width: 150, height: 150)
@@ -45,26 +44,18 @@ struct HomeView: View {
                             .frame(width: 150, height: 150)
                     }.padding(10)
                     
-                    
+                    // Subtítulo explicativo.
                     Text("We help you cook your eggs \njust the way you like them!")
                         .font(.system(size: Constants.subtitleFontSize))
                         .fontWeight(.regular)
                         .foregroundStyle(Constants.fontColor)
                         .multilineTextAlignment(.center)
                     
-//                    TextField("Write your name to start!", text: $name)
-//                        .font(.system(size: Constants.buttonFontSize))
-//                        .fontWeight(.semibold)
-//                        .foregroundColor(Constants.fontColor)
-//                        .multilineTextAlignment(.center)
-//                        .textFieldStyle(RoundedBorderTextFieldStyle())
-//                        .padding(.trailing, 40)
-//                        .padding(.leading, 40)
-                    
                     Spacer()
-
+                    
+                    // Botão que navega para a tela do temporizador (TimerView).
                     NavigationLink(
-                        destination: TimerView(), // Navega para TimerView
+                        destination: TimerView(),
                         label: {
                             Text("Start timer")
                                 .font(.system(size: Constants.buttonFontSize))
@@ -79,12 +70,11 @@ struct HomeView: View {
                 .padding(.top, 70)
                 .padding(.bottom, 50)
             }
-        }.tint(Constants.fontColor) // Set the back button and link color
+        }
+        .tint(Constants.fontColor) // Define a cor do botão "Voltar" e dos links.
     }
 }
 
-struct HomeView_Preview: PreviewProvider {
-    static var previews: some View {
-        HomeView ()
-    }
+#Preview {
+    HomeView() // Visualização da interface no Xcode.
 }
