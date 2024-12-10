@@ -1,5 +1,5 @@
 //
-//  TimerViewModel.swift
+//  TimerManager.swift
 //  EggTimer
 //
 //  Created by Maria Tereza Martins Pérez on 05/12/24.
@@ -13,7 +13,7 @@
 import Foundation
 import SwiftUI
 
-class TimerViewModel: ObservableObject, @unchecked Sendable {
+class TimerManager: ObservableObject, @unchecked Sendable {
     // Variáveis que armazenam o estado do timer e atualizam a interface automaticamente.
     @Published var timeRemaining: Int = 0 // Tempo restante do timer, em segundos.
     @Published var timerRunning: Bool = false // Indica se o timer está ativo ou não.

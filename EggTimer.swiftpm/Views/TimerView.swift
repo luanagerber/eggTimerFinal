@@ -13,7 +13,7 @@ import SwiftUI
 
 struct TimerView: View {
     
-    @StateObject private var viewModel = TimerViewModel() // Instância da ViewModel para gerenciar o estado do timer.
+    @StateObject private var viewModel = TimerManager() // Instância da ViewModel para gerenciar o estado do timer.
     
     var body: some View {
         
