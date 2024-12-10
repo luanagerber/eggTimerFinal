@@ -37,16 +37,16 @@ struct HomeView: View {
                         .multilineTextAlignment(.center)
                     
                     // Imagens dos ovos para decorar a interface.
-                    HStack(spacing: -40) {
+                    HStack(spacing: -15) {
                         Image("egg_soft")
                             .resizable()
-                            .frame(width: 150, height: 150)
+                            .frame(width: 110, height: 150)
                         Image("egg_medium")
                             .resizable()
-                            .frame(width: 150, height: 150)
+                            .frame(width: 110, height: 150)
                         Image("egg_hard")
                             .resizable()
-                            .frame(width: 150, height: 150)
+                            .frame(width: 110, height: 150)
                     }.padding(10)
                     
                     // Subtítulo explicativo.

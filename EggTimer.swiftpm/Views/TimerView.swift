@@ -46,7 +46,7 @@ struct TimerView: View {
                     VStack {
                         Image("egg_soft") // Imagem do ovo "Soft".
                             .resizable()
-                            .frame(width: 120, height: 120)
+                            .frame(width: 87, height: 120)
                         
                         // Botão para iniciar o timer no modo  "Soft".
                         Button(action: {
@@ -66,7 +66,7 @@ struct TimerView: View {
                     VStack {
                         Image("egg_medium") // Imagem do ovo "Medium".
                             .resizable()
-                            .frame(width: 120, height: 120)
+                            .frame(width: 87, height: 120)
                         
                         // Botão para iniciar o timer no modo "Medium".
                         Button(action: {
@@ -86,7 +86,7 @@ struct TimerView: View {
                     VStack {
                         Image("egg_hard") // Imagem do ovo "Hard".
                             .resizable()
-                            .frame(width: 120, height: 120)
+                            .frame(width: 87, height: 120)
                         
                         // Botão para iniciar o timer no modo  "Hard".
                         Button(action: {
