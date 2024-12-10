@@ -5,10 +5,12 @@
 //  Created by Luana Gerber on 04/12/24.
 //
 
+
+// Para entender melhor como editar esse arquivo: procurar no Figma "Folha de Estilos", na seção "Avançando em SwiftUI".
+
 import SwiftUI
 import CoreFoundation
 
-// Para entender mais sobre esse contéudo procurar no Figma "Folha de Estilos"
 struct Constants {
     //Element Colors
     static let backgroundColor = Color("lightBlue")

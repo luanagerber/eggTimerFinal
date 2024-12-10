@@ -5,6 +5,10 @@
 //  Created by Luana Gerber on 05/12/24.
 //
 
+
+// Para entender melhor como editar esse arquivo: procurar no Figma "Fontes customizadas", na seção "Avançando em SwiftUI".
+
+
 // Importa bibliotecas que trazem funcionalidades essenciais para o aplicativo.
 import Foundation
 import SwiftUI

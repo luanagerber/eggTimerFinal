@@ -5,6 +5,10 @@
 //  Created by Luana Gerber on 04/12/24.
 //
 
+
+// Para entender melhor como editar esse arquivo: procurar no Figma a seção "Elementos básicos do SwiftUI".
+
+
 import SwiftUI
 
 struct HomeView: View {
@@ -12,7 +16,7 @@ struct HomeView: View {
         NavigationStack { // Gerencia a navegação entre telas.
             ZStack {
                 Constants.backgroundColor
-                    .ignoresSafeArea() // Define a cor de fundo cobrindo toda a tela.
+                    .ignoresSafeArea() // Define a cor de fundo ocupando toda a tela e ignorando a Safe Area.
                 
                 Image("Background") // Imagem de fundo decorativa.
                     .resizable()
@@ -25,6 +29,7 @@ struct HomeView: View {
                     
                     // Título principal da tela.
                     Text("Welcome to \nEgg Timer!")
+                    // o \n adiciona a quebra de linha.
                         .font(Constants.titleFont)
                         .fontWeight(.semibold)
                         .textCase(.uppercase)
@@ -71,10 +76,10 @@ struct HomeView: View {
                 .padding(.bottom, 50)
             }
         }
-        .tint(Constants.fontColor) // Define a cor do botão "Voltar" e dos links.
+        .tint(Constants.fontColor) // Define a cor do botão "Voltar".
     }
 }
 
 #Preview {
-    HomeView() // Visualização da interface no Xcode.
+    HomeView() // Visualização da prévia da interface no Xcode.
 }

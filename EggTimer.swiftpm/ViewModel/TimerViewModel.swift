@@ -5,6 +5,10 @@
 //  Created by Maria Tereza Martins Pérez on 05/12/24.
 //
 
+
+// Este arquivo contém o timer e a função que toca o timer ao final do progresso. Não se preocupe com este arquivo.
+
+
 // Importa bibliotecas essenciais.
 import Foundation
 import SwiftUI

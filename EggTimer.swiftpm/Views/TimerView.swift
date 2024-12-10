@@ -5,6 +5,10 @@
 //  Created by Luana Gerber on 04/12/24.
 //
 
+
+// Para entender melhor como editar esse arquivo: procurar no Figma a seção "Elementos básicos do SwiftUI".
+
+
 import SwiftUI
 
 struct TimerView: View {
@@ -17,7 +21,7 @@ struct TimerView: View {
         
         ZStack {
             Constants.backgroundColor
-                .ignoresSafeArea() // Define o fundo da tela.
+                .ignoresSafeArea() // Define a cor do fundo da tela, ocupando toda a area e ignorando a Safe Area.
             
             VStack(spacing: 20) {
                 // Título principal
@@ -44,7 +48,7 @@ struct TimerView: View {
                             .resizable()
                             .frame(width: 120, height: 120)
                         
-                        // Botão para iniciar o timer "Soft".
+                        // Botão para iniciar o timer no modo  "Soft".
                         Button(action: {
                             viewModel.startTimer(duration: eggTimes["Soft"] ?? 0)
                             print("Soft timer set: \(eggTimes["Soft"] ?? 0) minutes")
@@ -64,7 +68,7 @@ struct TimerView: View {
                             .resizable()
                             .frame(width: 120, height: 120)
                         
-                        // Botão para iniciar o timer "Medium".
+                        // Botão para iniciar o timer no modo "Medium".
                         Button(action: {
                             viewModel.startTimer(duration: eggTimes["Medium"] ?? 0)
                             print("Medium timer set: \(eggTimes["Medium"] ?? 0) minutes")
@@ -84,7 +88,7 @@ struct TimerView: View {
                             .resizable()
                             .frame(width: 120, height: 120)
                         
-                        // Botão para iniciar o timer "Hard".
+                        // Botão para iniciar o timer no modo  "Hard".
                         Button(action: {
                             viewModel.startTimer(duration: eggTimes["Hard"] ?? 0)
                             print("Hard timer set: \(eggTimes["Hard"] ?? 0) minutes")
@@ -125,5 +129,5 @@ struct TimerView: View {
 }
 
 #Preview {
-    TimerView()
+    TimerView() //Visualização da prévia da interface no XCode.
 }
